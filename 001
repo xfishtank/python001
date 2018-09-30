@@ -45,9 +45,17 @@ print("now => %s" % date2.strftime('%A'))
 print("now1 => %s" % datetime.datetime.now().strftime('%A'))
 
 
-date_str2 = '9/29/18'
-date_dt2 = datetime.datetime.strptime("9/29/18", '%m/%d/%y')
+#date_str2 = '9/28/18'
+date_dt2 = datetime.datetime.strptime("9/30/18", '%m/%d/%y')
 print("date_dt2 = %s" % date_dt2)
 print("date_dt2 = %s" % date_dt2.date())   # .date() allow you to remove 00:00:00
 
 print("and it is %s" % date_dt2.strftime('%A'))
+
+if date_dt2.strftime('%A') == 'Sunday':
+    print("Sunday - party date")
+elif date_dt2.strftime('%A') == 'Saturday':
+    print("Saturday - take some rest")
+else:
+    print("Work. Work. Work")
+
