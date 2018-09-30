@@ -1,0 +1,53 @@
+print("hello world")
+
+#from datetime import datetime
+import datetime
+
+odds = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19,
+        21, 23, 25, 27, 29, 31, 33, 35, 37, 39,
+        41, 43, 45, 47, 49, 51, 53, 55, 57, 59 ]
+
+right_this_minute = datetime.datetime.today().minute
+print("I got %s" % right_this_minute)
+right_this_time = datetime.datetime.today()
+print("It is now: %s" % right_this_time)
+
+if right_this_minute in odds:
+    print("This minute seems a little odd.")
+else:
+    print("Not an odd minute")
+
+
+import os
+#import getcwd
+where_am_I = os.getcwd()
+print("Where? %s" % where_am_I)
+
+import sys
+print("system platform : %s" % sys.version)
+
+import time
+print("Time: %s" % time.strftime("%H:%M"))
+print("It is: %s" % time.strftime("%A"))
+
+
+
+import html
+new_text = html.escape("This HTML fragment contains a <script>script</script> tag.")
+print("without tag: %s" % new_text)
+
+
+date1 = datetime.datetime.now()
+print("date1 = %s" % date1)
+
+date2 = datetime.datetime.now()
+print("now => %s" % date2.strftime('%A'))
+print("now1 => %s" % datetime.datetime.now().strftime('%A'))
+
+
+date_str2 = '9/29/18'
+date_dt2 = datetime.datetime.strptime("9/29/18", '%m/%d/%y')
+print("date_dt2 = %s" % date_dt2)
+print("date_dt2 = %s" % date_dt2.date())   # .date() allow you to remove 00:00:00
+
+print("and it is %s" % date_dt2.strftime('%A'))
